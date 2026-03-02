@@ -66,10 +66,65 @@
      
     </section>
 
-    <section>
+    <section class="contenedor-general">
         <h1>EJERCICIO N°3</h1>
-        
+        <div class="selectores">
+            <select id="select1">
+                <option numero="1">1</option>
+                <option numero="2">2</option>
+                <option numero="3">3</option>
+                <option numero="4">4</option>
+                <option numero="5">5</option>
+                <option numero="6">6</option>
+                <option numero="7">7</option>
+                <option numero="8">8</option>
+                <option numero="9">9</option>
+                </select>
+            
+            <select id="select2">
+                <option numero="1">1</option>
+                <option numero="2">2</option>
+                <option numero="3">3</option>
+                <option numero="4">4</option>
+                <option numero="5">5</option>
+                <option numero="6">6</option>
+                <option numero="7">7</option>
+                <option numero="8">8</option>
+                <option numero="9">9</option>
+            </select>
+            
+            <select id="select3">
+                <option numero="1">1</option>
+                <option numero="2">2</option>
+                <option numero="3">3</option>
+                <option numero="4">4</option>
+                <option numero="5">5</option>
+                <option numero="6">6</option>
+                <option numero="7">7</option>
+                <option numero="8">8</option>
+                <option numero="9">9</option>
+            </select>
+        </div>
+
+        <button id="btnIngresar" onclick="
+            let num1 = document.querySelector('#select1').value;
+            let num2 = document.querySelector('#select2').value;
+            let num3 = document.querySelector('#select3').value;
+            let password = num1 + num2 + num3;
+            let mensaje = document.querySelector('#resultado-pass');
+
+            if (password === '911') {
+                mensaje.innerHTML = 'Password 1 correcto';
+            } else if (password === '714') {
+                mensaje.innerHTML = 'Password 2 correcto';
+            } else {
+                mensaje.innerHTML = 'Password incorrecto';
+            }
+        ">Ingresar</button>
+
+        <p id="resultado-pass"></p>
     </section>
+    
    
 </body>
 </html>
